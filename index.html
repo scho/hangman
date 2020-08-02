@@ -9,32 +9,10 @@
         }
     </style>
     <script type="application/javascript">
-      var worte = ['OSKAR', 'MARLENE', 'GEORG'];
-
-      var zuRatendesWort;
-      var wortBisher;
-
       function neuesSpiel() {
-        var wort = document.getElementById('wort');
-
-        zuRatendesWort = worte[Math.floor(Math.random() * worte.length)];
-        wortBisher = '';
-        for (var i = 0; i < zuRatendesWort.length; i++) {
-          wortBisher = wortBisher + '_';
-        }
-        wort.innerHTML = wortBisher;
       }
 
       function rateBuchstabe() {
-        var buchstabe = document.getElementById('buchstabe').value;
-        var wort = document.getElementById('wort');
-
-        for (var i = 0; i < zuRatendesWort.length; i++) {
-          if (zuRatendesWort[i] === buchstabe) {
-            wortBisher = wortBisher.substring(0, i) + buchstabe + wortBisher.substring(i + 1);
-          }
-        }
-        wort.innerHTML = wortBisher;
       }
     </script>
 </head>
